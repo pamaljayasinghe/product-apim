@@ -1,0 +1,29 @@
+{
+  "category": "Mediation",
+  "name": "intelligentModelRouting",
+  "version": "v1",
+  "displayName": "Intelligent Model Routing",
+  "description": "This policy enables traffic rerouting to one or more fallback models if the target model fails, ensuring continued availability",
+  "policyAttributes": [
+    {
+      "name": "llmRouteConfigs",
+      "displayName": "Intelligent Model Routing Configurations",
+      "description": "Configurations for the Intelligent Model Routing policy",
+      "validationRegex": "^.+$",
+      "type": "String",
+      "required": true
+    }
+  ],
+  "applicableFlows": [
+    "request"
+  ],
+  "supportedGateways": [
+    "Synapse"
+  ],
+  "supportedApiTypes": [
+    {
+      "apiType": "HTTP",
+      "subType": "AIAPI"
+    }
+  ]
+}
